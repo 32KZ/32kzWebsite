@@ -1,6 +1,6 @@
 # 32kzWebsite
  
 this is my github.IO website!
-https://32KZ.github.io/32kzWebsite/index.html
+https://32kz.github.io/32kzWebsite/
 
 go to the index.
