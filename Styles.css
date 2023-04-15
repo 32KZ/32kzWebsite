@@ -51,9 +51,9 @@ nav a.active {
 
 .grid-container {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 20px;
-			padding: 20px;
+			grid-template-columns: repeat(6, 1fr);
+			grid-gap: 10px;
+			padding: 10px;
 		}
 		.grid-item {
 			background-color: #f1f1f1;
