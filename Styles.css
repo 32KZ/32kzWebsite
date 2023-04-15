@@ -48,3 +48,19 @@ nav a.active {
 	
   background-color: #5533ff;
 }
+
+.grid-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			padding: 20px;
+		}
+		.grid-item {
+			background-color: #f1f1f1;
+			text-align: center;
+			padding: 20px;
+		}
+		.grid-item img {
+			max-width: 100%;
+			height: auto;
+		}
