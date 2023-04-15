@@ -30,17 +30,19 @@
 	
     <script>
       var totalClicks = 0;
-    
 
       function registerClick() {
-        totalClicks++;
-		document.getElementById("ClickDisplay").innerHTML = "Clicks: " + totalClicks;
+			totalClicks++;
+			document.getElementById("ClickDisplay").innerHTML = "Clicks: " + totalClicks;
+		
+		
       }
 	  
 	  function StartTimer() {
 		
 		document.getElementById("Start").disabled = true; //Disable Start button
 		document.getElementById("ClickDisplay").innerHTML = "Clicks: 0";
+		totalClicks = 0;
 		//-=-=-=-=-=-=-=-
 		
 		document.getElementById("sectimer").style.display = "block"; 	// Show <p id>
@@ -104,6 +106,7 @@
 		  document.getElementById("cps").innerHTML = "That's " + ClicksPerSecond + " Clicks per second!";
 		  totalClicks = 0;
 		  document.getElementById("Start").disabled = false;
+		  activeCheck = false;
 		  
         }
 		
