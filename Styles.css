@@ -10,6 +10,7 @@ body {
   text-align: center;
   font-family: 'Rubik', sans-serif;
 }
+padbreak{padding:10px;}
 h1{
     text-decoration: underline;
 }
@@ -28,7 +29,10 @@ nav {
     
   background-color: #333;
   overflow: hidden;
+  
 }
+
+
 
 nav a {
     
