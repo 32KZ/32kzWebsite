@@ -102,6 +102,11 @@ nav a.active {
     vertical-align: middle;
 	}
 
+.spin {
+	animation: spin 1s linear;
+	
+}
+
 @keyframes slide {
 	from {
 		transform: translateX(-20%);
