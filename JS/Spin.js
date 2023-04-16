@@ -6,6 +6,7 @@ function Spin()
 {
 	var image = document.getElementById("ASI");
 	image.classList.add("spin");
+	spin.volume = 0.5;
 	spin.play();
 	setTimeout(() => 
 	{

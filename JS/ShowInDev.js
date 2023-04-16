@@ -18,5 +18,6 @@ function ShowInDev()
 
 function Secret()
 {
+	MaETa.volume = 0.4;
 	MaETa.play()
 } 
