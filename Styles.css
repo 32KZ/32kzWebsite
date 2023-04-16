@@ -6,7 +6,7 @@
 }
 
 body {
-    
+  overflow-x: hidden;
   text-align: center;
   font-family: 'Rubik', sans-serif;
 }
@@ -68,21 +68,18 @@ nav a.active {
 	}
         
 .gallery {
+	padding:30px;
     white-space: nowrap;
-    overflow: hidden;
-    overflow-x: hidden;
     position: relative;
-    animation: slide 10s linear infinite; /* changed timing function to linear */
+    animation: slide 20s linear infinite; /* changed timing function to linear */
 	}
 
 .gallery img {
     display: inline-block;
-    max-width: 25%;
+    max-width: 35%;
     width: auto;
     height: auto;
     vertical-align: middle;
-	overflow: hidden;
-    overflow-x: hidden;
 	}
 
 @keyframes slide {
@@ -90,6 +87,6 @@ nav a.active {
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
