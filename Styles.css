@@ -77,7 +77,7 @@ nav a.active {
 	padding:30px;
     white-space: nowrap;
     position: relative;
-    animation: slide 32s linear infinite; /* changed timing function to linear */
+    animation: slide 32s linear infinite; 
 	}
 
 .gallery img {
