@@ -1,0 +1,3 @@
+Make tetris
+make moving polish cow
+add cooler UI designs 
