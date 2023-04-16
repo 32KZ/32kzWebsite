@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
+    <title>Spinning Image</title>
     <style>
-      /* Add some style to the navigation bar */
-      nav {
-        background-color: #333;
-        overflow: hidden;
+      /* Style the spinning image container */
+      .spinning-image-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
       }
-      nav a {
-        float: left;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+      
+      /* Style the spinning image */
+      .spinning-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: spin 2s linear infinite;
       }
-      nav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      /* Add an active class to the active link */
-      nav a.active {
-        background-color: #4CAF50;
-      }
-      /* Add some style to the logo image */
-      nav img {
-        height: 30px;
-        margin-top: 8px;
-      }
+      
+      /* Define the spin animation */
+      
     </style>
   </head>
   <body>
-    <!-- Add a navigation bar with a link to another page -->
-    <nav>
-      <a href="#" class="active">
-        <img src="logo.png" alt="Logo"> Home
-      </a>
-      <a href="another_page.html">
-        <img src="icon.png" alt="Icon"> Another Page
-      </a>
-    </nav>
+    
 
-    <!-- Add some content to the home page -->
+    <!-- Add some content below the spinning image -->
     <h1>Welcome to my website!</h1>
-    <p>This is the home page.</p>
+    <p>Here's a spinning image:</p>
+	
+	<!-- Add a spinning image container with an image inside -->
+    <div class="spinning-image-container">
+      <img class="spinning-image" src="image1.jpg" alt="Spinning Image">
+    </div>
+
+    <!-- Add a button to toggle the spinning animation -->
+    <button id="toggle-button">Toggle Spin</button>
+
+    <!-- Add some JavaScript to toggle the spinning animation -->
+    <script>
+      var spinningImage = document.querySelector('.spinning-image');
+      var toggleButton = document.querySelector('#toggle-button');
+
+      toggleButton.addEventListener('click', function() {
+        if (spinningImage.style.animationPlayState === 'paused') {
+          spinningImage.style.animationPlayState = 'running';
+        } else {
+          spinningImage.style.animationPlayState = 'paused';
+        }
+      });
+    </script>
   </body>
 </html>
