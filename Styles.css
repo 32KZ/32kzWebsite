@@ -71,22 +71,22 @@ nav a.active {
 	padding:30px;
     white-space: nowrap;
     position: relative;
-    animation: slide 30s linear infinite; /* changed timing function to linear */
+    animation: slide 20s linear infinite; /* changed timing function to linear */
 	}
 
 .gallery img {
     display: inline-block;
-    max-width: 35%;
+    max-width: 45%;
     width: auto;
     height: auto;
     vertical-align: middle;
 	}
 
 @keyframes slide {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
+	from {
+		transform: translateX(-20%);
+		}
+	to {
+		transform: translateX(-120%);
+	}
 }
