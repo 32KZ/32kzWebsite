@@ -13,5 +13,3 @@ function ShowInDev()
 		toggle = 0;
 	}
 }
-
-document.getElementById("InDev").style.display = "none";

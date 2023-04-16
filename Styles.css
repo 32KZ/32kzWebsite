@@ -41,10 +41,10 @@ nav {
 }
 
 nav img {
-	max-height: 200px;
+	height: 30px;
 	width: auto;
+    margin-top: 8px;
 	border-width:2px;
-	padding:0px;
 	
 }
 
