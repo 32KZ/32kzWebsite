@@ -25,6 +25,15 @@ img {
   height: auto;
 }
 
+canvas {
+  border-width: 6px;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  display: block;
+  margin: 0 auto;
+}
+
 nav {
     
   background-color: #333;
@@ -96,3 +105,5 @@ nav a.active {
 		transform: translateX(-243%);
 	}
 }
+
+
