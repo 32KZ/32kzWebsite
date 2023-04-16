@@ -20,7 +20,6 @@ img {
   border-style: solid;
   border-color: black;
   max-width:15%;
-  width: auto;
   height: auto;
 }
 
@@ -41,8 +40,8 @@ nav {
 }
 
 nav img {
-	height: 30px;
-	width: auto;
+	max-width:15%;
+	height: auto;
     margin-top: 8px;
 	border-width:2px;
 	
