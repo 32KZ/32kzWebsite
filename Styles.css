@@ -26,6 +26,16 @@ img {
   height: auto;
   text-align:center;
 }
+
+img.image-borderless{
+  border-width: 0px;
+  border-style: none;
+  border-color: none;
+  max-width:15%;
+  height: auto;
+  text-align:center;
+}
+
 img.horizontal {
   border-width: 6px;
   border-style: solid;
