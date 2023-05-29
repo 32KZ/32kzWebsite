@@ -2,5 +2,19 @@ Make tetris
 make moving polish cow
 add cooler UI designs 
 
-add a Freelancer section
-add a sorting visualised page
+
+Change page system from mesh to hub
+
+
+projects page
+	Make tetris
+	make moving polish cow
+ 	add a sorting visualised page
+	add a graffiti live page
+
+freelance page
+	Services overview
+	
+clients page
+	by section
+
