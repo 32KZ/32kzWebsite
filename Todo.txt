@@ -1,3 +1,6 @@
 Make tetris
 make moving polish cow
 add cooler UI designs 
+
+add a Freelancer section
+add a sorting visualised page
