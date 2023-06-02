@@ -8,10 +8,13 @@
         // Scrolling down
         document.body.classList.add("fade-in");
         document.body.classList.remove("fade-out");
+
       } else {
         // Scrolling up
-        document.body.classList.remove("fade-in");
-        document.body.classList.add("fade-out");
+        document.body.classList.add("fade-in");
+        document.body.classList.remove("fade-out");
+
+
       }
 
       prevScrollPos = currentScrollPos;
