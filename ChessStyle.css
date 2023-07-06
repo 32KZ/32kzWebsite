@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
 	text-align: center;
 	font-family: 'Rubik', sans-serif;
+	font-size: 100;
 }
 
 .container {
@@ -65,11 +66,13 @@ img {
 #board tr:nth-child(even) td:nth-child(even),
 #board tr:nth-child(odd) td:nth-child(odd) {
     background-color: #EEE;
+	font-size:22;
 }
 
 #board tr:nth-child(even) td:nth-child(odd),
 #board tr:nth-child(odd) td:nth-child(even) {
     background-color: #CCC;
+	font-size:22;
 }
 
 
