@@ -1,7 +1,6 @@
 Make tetris
 make moving polish cow
 add cooler UI designs 
-<<<<<<< Updated upstream
 
 
 Change page system from mesh to hub
@@ -19,6 +18,4 @@ freelance page
 clients page
 	by section
 
-=======
-add chess page 
->>>>>>> Stashed changes
+
