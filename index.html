@@ -1,61 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	<link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
     <title>32KZ</title>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+    <meta property="og:title" content="32kzWebsite" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="All about 32KZ, their Projects, and Services!" />
+    <meta property="og:image" content="Images/Seele.png" />
   </head>
   <body>
-    <!-- Nav Bar -->
-	<nav>
-	  <a style="display:none" id="InDev" target="_blank" href="InDevPage.html">Indev!</a>
-      <a href="index.html" class="active" >Home</a>
-	  <a href="Projects.html"  >Projects</a>
-      <a href="Services.html">Services</a>
-<a href="stupidFeed.html">Stupid Feed</a>
-	  
-    </nav>
-	<padbreak><p> </p></padbreak>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index.html">32KZ</a>
+        <div class="nav-links">
+          <a style="display: none" id="InDev" target="_blank" href="InDevPage.html">Indev!</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="Projects.html">Projects</a>
+          <a href="Services.html">Services</a>
+          <a href="stupidFeed.html">Stupid Feed</a>
+        </div>
+      </nav>
+    </header>
 
-    <!-- Content  -->
-	<img id="pfp" src="Images/Seele.png" alt="Profile Picture" onclick="ShowInDev()">
-    <h1>32KZ</h1>
-    <p>Welcome to my website!</p>
-    <p>this website is Full of my Code, hobbies, projects, and services!</p>
-    <p>See the <b>navigation bar</b> for all of my different projects!</p>
-	
-	<padbreak></padbreak>
-	
-	<img src="https://count.moeyy.cn/get/@:32KZ?theme=asoul" class="image-borderless" alt="32KZ Moe Counter" />
-	
-	<padbreak></padbreak>
-	
-	<div class="gallery">
-		<img src="Images/Honoji Academy.png">
-		<img src="Images/Heat Haze Daze.jpeg">
-		<img src="Images/Kagerou Team.jpeg">
-		<img src="Images/Rather-Be-Nightcore.jpg">
-		<img src="Images/Kagerou-Sky.png">
-		
-		<img src="Images/Honoji Academy.png">
-		<img src="Images/Heat Haze Daze.jpeg">
-		<img src="Images/Kagerou Team.jpeg">
-		<img src="Images/Rather-Be-Nightcore.jpg">
-		<img src="Images/Kagerou-Sky.png">
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="eyebrow">Welcome traveller 👋</p>
+          <h1>Code, hobbies, music &amp; more from 32KZ</h1>
+          <p>
+            Explore a curated mix of projects, services, and personal favorites that
+            power my creative universe.
+          </p>
+          <div class="hero__actions">
+            <a class="button primary" href="Projects.html">View projects</a>
+            <a class="button ghost" href="Services.html">Browse services</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <div class="hero__portrait">
+            <img id="pfp" src="Images/Seele.png" alt="Profile portrait" onclick="ShowInDev()" />
+          </div>
+        </div>
+      </section>
 
-	</div>
-	
-	<script src="JS/ShowInDev.js"></script>
+      <section class="info-grid" aria-label="Highlights">
+        <article class="info-card">
+          <h2>Projects hub</h2>
+          <p>
+            Dive into experiments, tools, and games that keep me learning. Each build is a
+            snapshot of what I am tinkering with right now.
+          </p>
+          <a class="cta" href="Projects.html">Go to projects</a>
+        </article>
+        <article class="info-card">
+          <h2>Services</h2>
+          <p>
+            Need a hand? I offer services ranging from coding help to creative support. Let
+            us make something awesome together.
+          </p>
+          <a class="cta" href="Services.html">See services</a>
+        </article>
+        <article class="info-card">
+          <h2>Community feed</h2>
+          <p>
+            Catch the latest updates, thoughts, and randomness in the Stupid Feed. It is
+            the best way to follow along.
+          </p>
+          <a class="cta" href="stupidFeed.html">Read the feed</a>
+        </article>
+      </section>
 
-	
-	<meta property="og:title" content="32kzWebsite" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://32kz.github.io/32kzWebsite/" />
-	<meta property="og:locale" content="en_GB" />
-	<meta property="og:description" content="All about 32KZ, their Projects, and Services!" />
-	<meta property="og:image" content="url(.Images/Seele.png)" />
-	
-	
-	</div>
+      <section class="moe-counter" aria-label="Visitor counter">
+        <h2>You're among friends</h2>
+        <p>Thanks for stopping by&mdash;here's the live visitor counter:</p>
+        <img src="https://count.moeyy.cn/get/@:32KZ?theme=asoul" class="counter-img" alt="32KZ Moe Counter" />
+      </section>
+
+      <section class="gallery" aria-label="Gallery of favorites">
+        <h2>Current inspirations</h2>
+        <div class="gallery__track">
+          <img src="Images/Honoji Academy.png" alt="Honoji Academy artwork" />
+          <img src="Images/Heat Haze Daze.jpeg" alt="Heat Haze Daze cover" />
+          <img src="Images/Kagerou Team.jpeg" alt="Kagerou Team illustration" />
+          <img src="Images/Rather-Be-Nightcore.jpg" alt="Rather Be Nightcore cover" />
+          <img src="Images/Kagerou-Sky.png" alt="Kagerou sky art" />
+          <img src="Images/Honoji Academy.png" alt="Honoji Academy artwork" />
+          <img src="Images/Heat Haze Daze.jpeg" alt="Heat Haze Daze cover" />
+          <img src="Images/Kagerou Team.jpeg" alt="Kagerou Team illustration" />
+          <img src="Images/Rather-Be-Nightcore.jpg" alt="Rather Be Nightcore cover" />
+          <img src="Images/Kagerou-Sky.png" alt="Kagerou sky art" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> 32KZ. Built with passion and the assets you see here.</p>
+    </footer>
+
+    <script src="JS/ShowInDev.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
