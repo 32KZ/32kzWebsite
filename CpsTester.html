@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	<link rel="icon" type="image/x-icon" href="favicon.png">
-    <title>32KZ: Click Test</title>
-	<link rel="stylesheet" type="text/css" href="Styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>CPS Tester | 32KZ</title>
+    <meta name="description" content="Test your clicks per second." />
+    <meta property="og:title" content="CPS Tester | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/CpsTester.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="Test your clicks per second." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
   </head>
   <body>
-    <!-- Nav Bar -->
-    <nav>
-      <a style="display:none" id="InDev" target="_blank" href="InDevPage.html">Indev!</a>
-      <a href="index.html" >Home</a>
-	  <a href="Projects.html" class="active" >Projects</a>
-      <a href="Services.html">Services</a>
-	  <!--<a href="Notris.html">Notris</a>-->
-    </nav>
-	<padbreak><p> </p></padbreak>
-	
-    <!-- Content -->
-	
-	<img id="CpsIcon" src="Images/CPS-Tester.png" alt="Cps Icon" style="border-width:0">
-	<p></p>
-	
-	<a href="https://www.github.com/32KZ/ClicksPerSecondUnblockable/" title="(old stand alone archive)" >Github</a>
-	
-	<p></p>
-	
-    <p>Click "Start", and then Spam "Click Here!"</p>
-    <p>timer of 5 seconds.</p>
-	<button id="Start" onclick="StartTimer()" style="width: 100px; height: 50px;">Start! </button>
-    <button onclick="registerClick()" 		  style="width: 100px; height: 50px;">Click Here!</button>
-    
-	<p id="clicks"></p>
-	<p id="cps"></p>
-	<p id="sectimer"></p>
-	<p id="ClickDisplay"></p>
-	
-	
-    <script src="JS/ClickTester.js"></script>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a href="stupidFeed.html">Stupid Feed</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
 
-      
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>CPS Tester</h1>
+        <p>Press Start, then click "Click here!" as fast as you can for five seconds.</p>
+      </section>
+
+      <section class="panel tool" aria-label="Click tester">
+        <img src="Images/CPS-Tester.png" alt="" width="250" height="187" />
+        <div class="tool__buttons">
+          <button class="button primary" id="Start" onclick="StartTimer()">Start</button>
+          <button class="button ghost" onclick="registerClick()">Click here!</button>
+        </div>
+        <div class="tool__output" aria-live="polite">
+          <p id="clicks"></p>
+          <p id="cps"></p>
+          <p id="sectimer"></p>
+          <p id="ClickDisplay"></p>
+        </div>
+        <a class="cta" href="https://github.com/32KZ/ClicksPerSecondUnblockable" target="_blank" rel="noopener">View the code on GitHub</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+        <img src="https://count.moeyy.cn/get/@:32KZ?theme=asoul" class="counter-img" alt="Visitor counter" loading="lazy" onerror="this.remove()" />
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
+    <script src="JS/ClickTester.js"></script>
   </body>
 </html>
