@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>SUPERNOVA | 32KZ</title>
+    <meta name="description" content="A standalone Windows command centre with workspaces, widgets and an always-on-top assistant." />
+    <meta property="og:title" content="SUPERNOVA | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/Supernova.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="A standalone Windows command centre with workspaces, widgets and an always-on-top assistant." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>SUPERNOVA</h1>
+        <ul class="tags"><li>Electron</li><li>Windows</li><li class="tag--private">Private</li></ul>
+        <p>SUPERNOVA is the successor to ZEKE-UI: a standalone desktop command centre for Windows. Every widget is its own managed native window, grouped into workspaces that remember their layout, project folder and state.</p>
+        <p>Press Shift+Alt+Space anywhere and a Raycast-style panel opens on top of everything, giving quick access to the assistant and the rest of SUPERNOVA.</p>
+        <div class="hero__actions">
+          <span class="button disabled">Private repository</span>
+          <a class="button ghost" href="Projects.html">All projects</a>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Project details">
+        <dl class="facts">
+          <div><dt>Language</dt><dd>TypeScript</dd></div>
+          <div><dt>Built with</dt><dd>Electron</dd></div>
+          <div><dt>Platform</dt><dd>Windows</dd></div>
+          <div><dt>Started</dt><dd>October 2026</dd></div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="features-title">
+        <h2 class="section-title" id="features-title">What it does</h2>
+        <ul class="feature-list">
+          <li><strong>Widgets</strong> for Files, Terminal, Code, Assistant, Launcher, Tasks, CPU, GPU, System, Global Situation, Clock and more.</li>
+          <li><strong>Workspaces</strong> keep their layouts and widget state while you hide or switch between them.</li>
+          <li><strong>Widget dial</strong>: a semicircular picker you can scroll, rotate with the arrow keys or pick from with 1 to 7.</li>
+          <li><strong>Overview</strong> (Shift+Alt+O) draws your monitors in their real arrangement, with drag-and-drop to move widgets between workspaces.</li>
+          <li>Its own command-line launcher and a Windows installer.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
+  </body>
+</html>

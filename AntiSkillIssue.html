@@ -1,80 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	<link rel="icon" type="image/x-icon" href="favicon.png">
-    <title>32KZ: ASI</title>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Anti Skill Issue | 32KZ</title>
+    <meta name="description" content="A Beat Saber mod for viewing your saved score data in game." />
+    <meta property="og:title" content="Anti Skill Issue | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/AntiSkillIssue.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="A Beat Saber mod for viewing your saved score data in game." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
   </head>
   <body>
-    <!-- Nav Bar -->
-    <nav>
-	  <a style="display:none" id="InDev" target="_blank" href="InDevPage.html">Indev!</a>
-      <a href="index.html" >Home</a>
-	  <a href="Projects.html" class="active" >Projects</a>
-      <a href="Services.html">Services</a>
-	  <!--<a href="Notris.html">Notris</a>-->
-    </nav>
-	<padbreak><p> </p></padbreak>
-    <!-- Content  -->
-	<img onclick="Spin()" Id="ASI" src="Images/AntiSkillIssue.png" alt="ASI-Icon" style="border-width:0">
-	<p></p>
-    <a href="https://www.github.com/32KZ/AntiSkillIssue/" title="AntiSkillIssue Github!"><h1>Anti Skill Issue</h1></a>
-    
-    <p>Welcome to Anti Skill Issue's Page!</p>
-    <p>ASI is a Beat Saber Mod that I created for the IPA-Reloaded Injector.</p>
-    <p>This Mod Aims to give users a way to view their saved score data Inside BeatSaber itself.</p>
-	<p>Currently, Since it was created for my A-Level, i cannot release it to Github for Public</p>
-	<p>use. this is due to the plagurism checkers OCR uses Checking Github for stolen Code. 💀</p>
-	<p>Mod is set to release Publicly August - December 2023! </p>
-	<p><b><u>Thank you to all of my Wonderful Testers:</b></u></p>
-	<p></p>
-	<div class="grid-container">
-		<div class="grid-item">
-			<img src="Images/Speecil.png" alt="Speecil's Profile Picture">
-			<h3>Speecil</h3>
-			<p style = "font-family: Impact">the harvest is bountiful this year </p>
-			<a 	
-				href="https://www.twitter.com/@SpeecilBS" 
-				target="_blank" 
-				title="Speecil's Social Link">
-				Twitter
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/Ridge.png" alt="Ridge's Profile Picture">
-			<h3>Ridge</h3>
-			<p>Genuinely thought this mod was just a cheat engine at first </p>
-			<a 	
-				href="https://www.youtube.com/@RidgeVR" 
-				target="_blank" 
-				title="Ridge's Youtube">
-				YouTube
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/glxybloq.png" alt="Galaxy's Profile Picture">
-			<h3 title="(desu)">Galaktyka</h3>
-			<p>gm.</p>
-			<a 	
-				href="https://linktr.ee/Galaxydesu" 
-				target="_blank" 
-				title="Galaktyka's Linktree">
-				Linktree
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/Ccencceth.png" alt="Ccencceth's Profile Picture">
-			<h3>Ccencceth</h3>
-			<p>👩‍🌾 Farming The Crop</p>
-			<a 	
-				href="https://www.twitch.tv/ccencceth" 
-				target="_blank" 
-				title="Ccencceth twitch">
-				Twitch
-			</a>
-		</div>
-	</div>
-	<script src="JS/Spin.js"></script>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
 
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>Anti Skill Issue</h1>
+        <p>
+          ASI is a Beat Saber mod I made for the IPA-Reloaded injector. It gives you a way to
+          view your saved score data inside Beat Saber itself.
+        </p>
+        <p>
+          I built it for my A-Level, so it couldn't be published on GitHub while it was being
+          marked (OCR's plagiarism checks scan GitHub for copied code 💀). A public release
+          was planned for August to December 2023.
+        </p>
+        <div class="hero__actions">
+          <a class="button primary" href="https://github.com/32KZ/AntiSkillIssue" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="testers-title">
+        <h2 class="section-title" id="testers-title">Thank you to all of my wonderful testers</h2>
+        <div class="card-grid">
+        <article class="card">
+          <div class="card__media"><img src="Images/Speecil.png" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Speecil</h3>
+            <p>The harvest is bountiful this year.</p>
+            <div class="card__actions"><a class="button small ghost" href="https://twitter.com/SpeecilBS" target="_blank" rel="noopener">Twitter</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media"><img src="Images/Ridge.png" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Ridge</h3>
+            <p>Genuinely thought this mod was just a cheat engine at first.</p>
+            <div class="card__actions"><a class="button small ghost" href="https://www.youtube.com/@RidgeVR" target="_blank" rel="noopener">YouTube</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media"><img src="Images/glxybloq.png" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Galaktyka</h3>
+            <p>gm.</p>
+            <div class="card__actions"><a class="button small ghost" href="https://linktr.ee/Galaxydesu" target="_blank" rel="noopener">Linktree</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media"><img src="Images/Ccencceth.png" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Ccencceth</h3>
+            <p>👩‍🌾 Farming the crop.</p>
+            <div class="card__actions"><a class="button small ghost" href="https://www.twitch.tv/ccencceth" target="_blank" rel="noopener">Twitch</a></div>
+          </div>
+        </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
   </body>
 </html>

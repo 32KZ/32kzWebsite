@@ -1,59 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	<link rel="icon" type="image/x-icon" href="favicon.png">
-    <title>32KZ: RareMusic</title>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Rare Music | 32KZ</title>
+    <meta name="description" content="Rare songs that are hard to find anywhere else online." />
+    <meta property="og:title" content="Rare Music | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/RareMusic.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="Rare songs that are hard to find anywhere else online." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
   </head>
   <body>
-    <!-- Nav Bar -->
-    <nav>
-	  <a style="display:none" id="InDev" target="_blank" href="InDevPage.html">Indev!</a>
-      <a href="index.html" >Home</a>
-	  <a href="Projects.html" class="active" >Projects</a>
-      <a href="Services.html">Services</a>
-	  <!--<a href="Notris.html">Notris</a>-->
-    </nav>
-	<padbreak><p> </p></padbreak>
-    <!-- Content  -->
-	
-	<img src="Images/Music.jpeg" alt="music">
-    <h1>Rare Music!</h1>
-    <p>Welcome to the Rare Music Section!</p>
-    <p>i like lots of different types of music. however, not all of them stay on the internet
-	forever, so i shove them here.</p>
-	<h2><b>Warning, the music is at 100% Volume by Default!!</b></h2>
-	
-	<div class="grid-container">
-		<div class="grid-item">
-			<img src="Music/Nisemono Chuuihou/Cover.jpg" alt="Nisemono Chuuihou">
-			<h3>Nisemono Chuuihou</h3>
-			<p>CV: Nao toyama | 150P | Bookmark of Demise Project</p>
-			<audio controls>
-				<source src="Music/Nisemono Chuuihou/Nisemono Chuuihou.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
-		</div>
-		<div class="grid-item">
-			<img src="Music/Garsh of Mine/Cover.png" alt="Sweet looking Garsh">
-			<h3>Sweet <a href="https://scoresaber.com/u/76561198187936410">Garsh</a> of Mine</h3>
-			<p>CV: NolanAnimations | <a href="https://soundcloud.com/nolanimations/sweet-garsh-of-mine">SoundCloud</a></p>
-			
-			<audio controls>
-				<source src="Music/Garsh of Mine/Sweet Garsh of Mine.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
-		</div>
-		<div class="grid-item">
-			<img src="Music/Mebiusu/Cover.png" alt="Mebiusu image">
-			<h3>Mebiusu</h3>
-			<p>CV: Hebi | Higari kirai </p>
-			<audio controls>
-				<source src="Music/Mebiusu/Mebiusu.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
-		</div>
-	</div>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html">Projects</a>
+          <a href="RareMusic.html" class="active" aria-current="page">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
 
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Rare Music</p>
+        <h1>Hidden gems</h1>
+        <p>
+          I listen to lots of different music, but not all of it stays on the internet
+          forever. So I keep copies of my favourites here.
+        </p>
+        <p class="notice">Heads up: players start at 40% volume, but some tracks are loud.</p>
+      </section>
+
+      <section class="card-grid" aria-label="Songs">
+        <article class="card">
+          <div class="card__media"><img src="Music/Nisemono Chuuihou/Cover.jpg" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Nisemono Chuuihou</h3>
+            <p>CV: Nao Toyama &middot; 150P &middot; Bookmark of Demise Project</p>
+            <audio controls preload="none"><source src="Music/Nisemono Chuuihou/Nisemono Chuuihou.mp3" type="audio/mpeg" />Your browser does not support audio playback.</audio>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media"><img src="Music/Garsh of Mine/Cover.png" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Sweet <a href="https://scoresaber.com/u/76561198187936410" target="_blank" rel="noopener">Garsh</a> of Mine</h3>
+            <p>CV: NolanAnimations &middot; <a href="https://soundcloud.com/nolanimations/sweet-garsh-of-mine" target="_blank" rel="noopener">SoundCloud</a></p>
+            <audio controls preload="none"><source src="Music/Garsh of Mine/Sweet Garsh of Mine.mp3" type="audio/mpeg" />Your browser does not support audio playback.</audio>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media"><img src="Music/Mebiusu/Cover.png" alt="" loading="lazy" /></div>
+          <div class="card__body">
+            <h3>Mebiusu</h3>
+            <p>CV: Hebi &middot; Higari Kirai</p>
+            <audio controls preload="none"><source src="Music/Mebiusu/Mebiusu.mp3" type="audio/mpeg" />Your browser does not support audio playback.</audio>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
   </body>
 </html>

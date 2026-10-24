@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>StashBuster | 32KZ</title>
+    <meta name="description" content="A server admin toolkit for cleaning up after a dupe: it finds where the duped items ended up." />
+    <meta property="og:title" content="StashBuster | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/StashBuster.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="A server admin toolkit for cleaning up after a dupe: it finds where the duped items ended up." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>StashBuster</h1>
+        <ul class="tags"><li>Minecraft</li><li>Paper plugin</li><li class="tag--private">Private</li></ul>
+        <p>StashBuster is a dupe mitigation plugin for Minecraft 1.21.1 servers. If a dupe gets out and everyone ends up maxed, install it and it will quietly log where tracked items are being stored.</p>
+        <p>When you're ready, it sends a plain-English report of every stash to a webhook, so admins can clean up.</p>
+        <div class="hero__actions">
+          <span class="button disabled">Private repository</span>
+          <a class="button ghost" href="Projects.html">All projects</a>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Project details">
+        <dl class="facts">
+          <div><dt>Language</dt><dd>Java</dd></div>
+          <div><dt>Built with</dt><dd>Maven, Paper API</dd></div>
+          <div><dt>Minecraft</dt><dd>1.21.1</dd></div>
+          <div><dt>Version</dt><dd>1.0.11</dd></div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="features-title">
+        <h2 class="section-title" id="features-title">What it does</h2>
+        <ul class="feature-list">
+          <li><strong>Tracks storage containers</strong> that hold the items you choose to watch.</li>
+          <li><strong>Webhook reports</strong> with selectable dump modes.</li>
+          <li><strong>Watch mode</strong> to follow a player's actions in real time.</li>
+          <li>An in-game admin interface (/stashbuster), exemptions and fine-grained permissions.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
+  </body>
+</html>

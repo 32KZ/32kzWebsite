@@ -1,106 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	<link rel="icon" type="image/x-icon" href="favicon.png">
-    <title>32KZ: My Projects</title>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Projects | 32KZ</title>
+    <meta name="description" content="Games, tools, apps and mods built by 32KZ." />
+    <meta property="og:title" content="Projects | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/Projects.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="Games, tools, apps and mods built by 32KZ." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
   </head>
   <body>
-    <!-- Nav Bar -->
-    <nav>
-	  <a style="display:none" id="InDev" target="_blank" href="InDevPage.html">Indev!</a>
-      <a href="index.html" >Home</a>
-	  <a href="Projects.html" class="active" >Projects</a>
-      <a href="Services.html">Services</a>
-	  
-    </nav>
-	<padbreak><p> </p></padbreak>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
 
-    <!-- Content  -->
-	<img id="pfp" src="Images/Honoji Academy.png" alt="Projects" onclick="ShowInDev()">
-    <h1>My Projects</h1>
-    <p>Welcome to my Projects!</p>
-    <p>i have been highly intrested in coding for as long as i can remember.</p>
-    <p>So as  a result, a webpage to share my projects was the first thing i decided to do!</p>
-    <p>Below is a list of my different <b>Projects</b> that you can look at. most of them are on github (:</p>
-	<p></p>
-	
-	<div class="grid-container">
-		
-		<div class="grid-item">
-			<img src="Images/CPS-Tester.png" alt="Cps tester" href="CpsTester.html">
-			<h3 href="CpsTester.html">CpsTester</h3>
-			<p> Test your Clicks per second!</p>
-			<a 	
-				href="CpsTester.html" 
-				title="Cps Tester Link">
-				Cps Tester
-			</a>
-		</div>
-		<div class="grid-item">
-			<img id="ASI" src="Images/AntiSkillIssue.png" alt="ASI" href="AntiSkillIssue.html" onclick="Spin()">
-			<h3 href="AntiSkillIssue.html">AntiSkillIssue</h3>
-			<p> Grow your PP with Care!</p>
-			<a 	
-				href="AntiSkillIssue.html" 
-				title="AntiSkillIssue">
-				AntiSkillIssue
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/Music.jpeg">
-			<h3>Rare Music</h3>
-			<p> Find hidden gems that cannot be found anywhere else online!</p>
-			<a 	
-				href="RareMusic.html" 
-				title="RareMusic">
-				Rare Music
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/32KZCommands.png">
-			<h3>32KZCommands</h3>
-			<p> use 32KZCommands to look like a windows Pro!</p>
-			<a 	
-				href="32KZCommands.html" 
-				title="32KZCommands">
-				32KZCommands
-				</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/UnderConstruction.png">
-			<h3>Sorting Visualised</h3>
-			<p> Different Sorting Algorythms Portrayed through Python turtle Graphics!</p>
-			<a 	
-				href="Sorting-Visualised.html" 
-				title="Sorting-Visualised">
-				Sorting Visualised
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/UnderConstruction.png">
-			<h3>Graffiti Live</h3>
-			<p> Place images on your friends' Live streams!</p>
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>Things I've built</h1>
+        <p>
+          I've been into coding for as long as I can remember, and this site was the first
+          thing I made to share it. Here's everything so far. Most of it is on GitHub; the
+          ones marked private aren't public yet.
+        </p>
+      </section>
 
-			<a 	
-				href="Graffiti-Live.html" 
-				title="Graffiti-Live">
-				Graffiti-Live
-			</a>
-		</div>
-		<div class="grid-item">
-			<img src="Images/32KZChess.png">
-			<h3>32KZChess!</h3>
-			<p> a virtual Chessboard for you to play on!</p>
-			<a 	
-				href="Chess.html" 
-				title="Chess-board">
-				CHESS
-			</a>
-		</div>
-		</div>
-	
-	<script src="JS/ShowInDev.js"></script>
-	<script src="JS/Spin.js"></script>
+      <section class="project-group" aria-labelledby="group-desktop-apps">
+        <h2 class="section-title" id="group-desktop-apps">Desktop apps</h2>
+        <p class="project-group__intro">Windows command centres I use every day.</p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>ZEKE</strong><span>TypeScript</span></div>
+            <div class="card__body">
+              <h3>ZEKE-UI</h3>
+              <ul class="tags"><li>Electron</li><li>Windows</li><li class="tag--private">Private</li></ul>
+              <p>A futuristic, modular command-centre shell for Windows, inspired by eDEX-UI.</p>
+              <div class="card__actions"><a class="button small primary" href="ZekeUI.html">Open</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>NOVA</strong><span>TypeScript</span></div>
+            <div class="card__body">
+              <h3>SUPERNOVA</h3>
+              <ul class="tags"><li>Electron</li><li>Windows</li><li class="tag--private">Private</li></ul>
+              <p>A standalone Windows command centre with workspaces, widgets and an always-on-top assistant.</p>
+              <div class="card__actions"><a class="button small primary" href="Supernova.html">Open</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-group" aria-labelledby="group-minecraft">
+        <h2 class="section-title" id="group-minecraft">Minecraft</h2>
+        <p class="project-group__intro">Plugins for servers and add-ons for the client.</p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>ZEEK</strong><span>Java</span></div>
+            <div class="card__body">
+              <h3>ZEEK-PACKET</h3>
+              <ul class="tags"><li>Minecraft</li><li>Meteor add-on</li><li class="tag--private">Private</li></ul>
+              <p>A Meteor Client add-on that gathers useful tools from other mods into one place, plus custom modules.</p>
+              <div class="card__actions"><a class="button small primary" href="ZeekPacket.html">Open</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>STASH</strong><span>Java</span></div>
+            <div class="card__body">
+              <h3>StashBuster</h3>
+              <ul class="tags"><li>Minecraft</li><li>Paper plugin</li><li class="tag--private">Private</li></ul>
+              <p>A server admin toolkit for cleaning up after a dupe: it finds where the duped items ended up.</p>
+              <div class="card__actions"><a class="button small primary" href="StashBuster.html">Open</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>RECIPES</strong><span>Java</span></div>
+            <div class="card__body">
+              <h3>ZKCustomRecipes</h3>
+              <ul class="tags"><li>Minecraft</li><li>Paper plugin</li><li class="tag--private">Private</li></ul>
+              <p>Custom crafting recipes for a Minecraft server, configured in a file, with enchantment support.</p>
+              <div class="card__actions"><a class="button small primary" href="ZKCustomRecipes.html">Open</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>ZEEK</strong><span>Java</span></div>
+            <div class="card__body">
+              <h3>ZEEK</h3>
+              <ul class="tags"><li>Minecraft</li><li>Spigot plugin</li><li class="tag--private">Private</li></ul>
+              <p>A Spigot plugin for my Minecraft server, full of things that should already be in the game.</p>
+              <div class="card__actions"><a class="button small primary" href="ZeekPlugin.html">Open</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-group" aria-labelledby="group-tools-and-games">
+        <h2 class="section-title" id="group-tools-and-games">Tools and games</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__media card__media--contain"><img src="Images/CPS-Tester.png" alt="" loading="lazy" /></div>
+            <div class="card__body">
+              <h3>CPS Tester</h3>
+              <ul class="tags"><li>JavaScript</li><li>Tool</li></ul>
+              <p>How fast can you click? Find your clicks per second in a five second test.</p>
+              <div class="card__actions"><a class="button small primary" href="CpsTester.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/ClicksPerSecondUnblockable" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--contain"><img src="Images/32KZChess.png" alt="" loading="lazy" /></div>
+            <div class="card__body">
+              <h3>32KZ Chess</h3>
+              <ul class="tags"><li>JavaScript</li><li>Game</li></ul>
+              <p>A virtual chessboard you can set up and play on right in the browser.</p>
+              <div class="card__actions"><a class="button small primary" href="Chess.html">Open</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--contain"><img src="Images/32KZCommands.png" alt="" loading="lazy" /></div>
+            <div class="card__body">
+              <h3>32KZ Commands</h3>
+              <ul class="tags"><li>Batch</li><li>Windows</li></ul>
+              <p>A folder of fun batch commands that make the Windows terminal feel like home.</p>
+              <div class="card__actions"><a class="button small primary" href="32KZCommands.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/32KZ-Commands" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>ZKMAP</strong><span>C#</span></div>
+            <div class="card__body">
+              <h3>ZKMapper</h3>
+              <ul class="tags"><li>C#</li><li>.NET</li><li>Automation</li></ul>
+              <p>Maps the people at a company on LinkedIn and saves them to a CSV, for several companies at once.</p>
+              <div class="card__actions"><a class="button small primary" href="ZKMapper.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/ZKmapper" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>£</strong><span>C#</span></div>
+            <div class="card__body">
+              <h3>Finance Management</h3>
+              <ul class="tags"><li>C#</li><li>CLI</li></ul>
+              <p>A simple command-line app for tracking payments and monthly statements.</p>
+              <div class="card__actions"><a class="button small primary" href="FinanceManagement.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/Finance-Management" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>SORT</strong><span>Python</span></div>
+            <div class="card__body">
+              <h3>Sorting Visualised</h3>
+              <ul class="tags"><li>Python</li><li>Algorithms</li></ul>
+              <p>Sorting algorithms brought to life with Python turtle graphics.</p>
+              <div class="card__actions"><a class="button small primary" href="SortingVisualised.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/SortingVisualised" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--placeholder">Coming soon</div>
+            <div class="card__body">
+              <h3>Graffiti Live</h3>
+              <ul class="tags"><li>Streaming</li></ul>
+              <p>Place images on your friends' live streams.</p>
+              <div class="card__actions"><span class="button small disabled">In progress</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-group" aria-labelledby="group-beat-saber">
+        <h2 class="section-title" id="group-beat-saber">Beat Saber</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__media card__media--contain"><img src="Images/AntiSkillIssue.png" alt="" loading="lazy" id="ASI" onclick="Spin()" /></div>
+            <div class="card__body">
+              <h3>Anti Skill Issue</h3>
+              <ul class="tags"><li>Beat Saber</li><li>Mod</li></ul>
+              <p>A Beat Saber mod that lets you browse your saved score data without leaving the game.</p>
+              <div class="card__actions"><a class="button small primary" href="AntiSkillIssue.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/AntiSkillIssue" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>CHAT</strong><span>C#</span></div>
+            <div class="card__body">
+              <h3>Beat Saber Multiplayer Chat</h3>
+              <ul class="tags"><li>Beat Saber</li><li>Fork</li></ul>
+              <p>My fork of roydejong's voice and text chat mod for Beat Saber multiplayer.</p>
+              <div class="card__actions"><a class="button small primary" href="BeatSaberMultiplayerChat.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/BeatSaberMultiplayerChat" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-group" aria-labelledby="group-web">
+        <h2 class="section-title" id="group-web">Web</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>32KZ</strong><span>HTML</span></div>
+            <div class="card__body">
+              <h3>32KZ Website</h3>
+              <ul class="tags"><li>Web</li><li>JavaScript</li></ul>
+              <p>This site. My first project for sharing everything else I make.</p>
+              <div class="card__actions"><a class="button small primary" href="ThisWebsite.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/32kzWebsite" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>NSMP</strong><span>HTML</span></div>
+            <div class="card__body">
+              <h3>NSMP Website</h3>
+              <ul class="tags"><li>Web</li><li>Minecraft</li></ul>
+              <p>An events website for the NSMP Minecraft server.</p>
+              <div class="card__actions"><a class="button small primary" href="NSMPWebsite.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/NSMP-Website" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media"><img src="Images/Music.jpeg" alt="" loading="lazy" /></div>
+            <div class="card__body">
+              <h3>Rare Music</h3>
+              <ul class="tags"><li>Music</li></ul>
+              <p>Hidden gems that are hard to find anywhere else online, kept safe here.</p>
+              <div class="card__actions"><a class="button small primary" href="RareMusic.html">Listen</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-group" aria-labelledby="group-odds-and-ends">
+        <h2 class="section-title" id="group-odds-and-ends">Odds and ends</h2>
+        <p class="project-group__intro">Forks, utilities and the rest of my GitHub.</p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>32KZ</strong><span>Markdown</span></div>
+            <div class="card__body">
+              <h3>GitHub Profile</h3>
+              <ul class="tags"><li>GitHub</li></ul>
+              <p>The config behind my GitHub profile page: what I'm working on and a peek at private projects.</p>
+              <div class="card__actions"><a class="button small primary" href="GitHubProfile.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/32KZ" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>TWITCH</strong><span>JavaScript</span></div>
+            <div class="card__body">
+              <h3>Twitch Ad Solutions</h3>
+              <ul class="tags"><li>Fork</li><li>Browser</li></ul>
+              <p>A pinned copy of pixeltris's Twitch ad-blocking scripts, kept for my own use.</p>
+              <div class="card__actions"><a class="button small primary" href="TwitchAdSolutions.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/TwitchAdSolutions" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>GPT</strong><span>Images</span></div>
+            <div class="card__body">
+              <h3>GPT Screenshare</h3>
+              <ul class="tags"><li>Utility</li><li class="tag--private">Private</li></ul>
+              <p>A small repo for sharing screenshots with ChatGPT while working on projects.</p>
+              <div class="card__actions"><a class="button small primary" href="GPTScreenshare.html">Open</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media card__media--mark" aria-hidden="true"><strong>FILES</strong><span>Images</span></div>
+            <div class="card__body">
+              <h3>FileShare</h3>
+              <ul class="tags"><li>Utility</li><li class="tag--private">Private</li></ul>
+              <p>A tiny repo for passing files around, starting with some cubism-style artwork.</p>
+              <div class="card__actions"><a class="button small primary" href="FileShare.html">Open</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
+    <script src="JS/Spin.js"></script>
   </body>
 </html>
