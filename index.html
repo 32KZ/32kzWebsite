@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <title>32KZ</title>
-    <meta name="description" content="Games, tools and mods built by 32KZ, plus a few personal favourites." />
+    <meta name="description" content="Apps, games, tools and mods built by 32KZ." />
     <meta property="og:title" content="32KZ" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://32kz.github.io/32kzWebsite/" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:description" content="Games, tools and mods built by 32KZ, plus a few personal favourites." />
+    <meta property="og:description" content="Apps, games, tools and mods built by 32KZ." />
     <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
     <meta name="theme-color" content="#0c0b16" />
     <link rel="stylesheet" href="Styles.css" />
@@ -24,7 +24,6 @@
           <a href="index.html" class="active" aria-current="page">Home</a>
           <a href="Projects.html">Projects</a>
           <a href="RareMusic.html">Music</a>
-          <a href="stupidFeed.html">Stupid Feed</a>
           <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
         </div>
       </nav>
@@ -34,11 +33,11 @@
       <section class="hero">
         <div class="hero__content">
           <p class="eyebrow">Welcome traveller 👋</p>
-          <h1>Games, tools and mods by 32KZ</h1>
+          <h1>Apps, tools and mods by 32KZ</h1>
           <p>
-            I build small things for fun and to keep learning: browser games, terminal
-            tools and a Beat Saber mod. Have a look around, and dig through some rare
-            music while you're here.
+            I build things for fun and to keep learning: desktop apps, Minecraft plugins,
+            command-line tools and the odd game. Have a look around, and dig through some
+            rare music while you're here.
           </p>
           <div class="hero__actions">
             <a class="button primary" href="Projects.html">View projects</a>
@@ -53,33 +52,36 @@
       </section>
 
       <section aria-labelledby="featured-title">
-        <h2 class="section-title" id="featured-title">Featured projects</h2>
+        <div class="section-head">
+          <h2 class="section-title" id="featured-title">Featured projects</h2>
+          <a class="cta" href="Projects.html">All 22 projects</a>
+        </div>
         <div class="card-grid card-grid--fill">
         <article class="card">
-          <div class="card__media card__media--contain"><img src="Images/CPS-Tester.png" alt="" loading="lazy" /></div>
+          <div class="card__media card__media--contain"><img src="Images/Supernova.png" alt="" loading="lazy" /></div>
           <div class="card__body">
-            <h3>CPS Tester</h3>
-            <ul class="tags"><li>JavaScript</li><li>Tool</li></ul>
-            <p>How fast can you click? Find your clicks per second in a five second test.</p>
-            <div class="card__actions"><a class="button small primary" href="CpsTester.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/ClicksPerSecondUnblockable" target="_blank" rel="noopener">Code</a></div>
+            <div class="card__title"><h3>SUPERNOVA</h3><span class="badge badge--private">Private</span></div>
+            <ul class="tags"><li>TypeScript</li><li>Electron</li><li>Windows</li></ul>
+            <p>A standalone command-centre desktop app for Windows, built around workspaces of live widgets.</p>
+            <div class="card__actions"><a class="button small primary" href="project-supernova.html">Details</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media card__media--mark" aria-hidden="true">ZM</div>
+          <div class="card__body">
+            <div class="card__title"><h3>ZKMapper</h3></div>
+            <ul class="tags"><li>C#</li><li>Playwright</li><li>CLI</li></ul>
+            <p>Maps the people at a company on LinkedIn and exports them as a structured CSV.</p>
+            <div class="card__actions"><a class="button small primary" href="project-zkmapper.html">Details</a><a class="button small ghost" href="https://github.com/32KZ/ZKmapper" target="_blank" rel="noopener">Code</a></div>
           </div>
         </article>
         <article class="card">
           <div class="card__media card__media--contain"><img src="Images/AntiSkillIssue.png" alt="" loading="lazy" id="ASI" onclick="Spin()" /></div>
           <div class="card__body">
-            <h3>Anti Skill Issue</h3>
-            <ul class="tags"><li>Beat Saber</li><li>Mod</li></ul>
+            <div class="card__title"><h3>Anti Skill Issue</h3></div>
+            <ul class="tags"><li>C#</li><li>Beat Saber mod</li></ul>
             <p>A Beat Saber mod that lets you browse your saved score data without leaving the game.</p>
-            <div class="card__actions"><a class="button small primary" href="AntiSkillIssue.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/AntiSkillIssue" target="_blank" rel="noopener">Code</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__media card__media--contain"><img src="Images/32KZCommands.png" alt="" loading="lazy" /></div>
-          <div class="card__body">
-            <h3>32KZ Commands</h3>
-            <ul class="tags"><li>Batch</li><li>Windows</li></ul>
-            <p>A folder of fun batch commands that make the Windows terminal feel like home.</p>
-            <div class="card__actions"><a class="button small primary" href="32KZCommands.html">Open</a><a class="button small ghost" href="https://github.com/32KZ/32KZ-Commands" target="_blank" rel="noopener">Code</a></div>
+            <div class="card__actions"><a class="button small primary" href="AntiSkillIssue.html">Details</a><a class="button small ghost" href="https://github.com/32KZ/AntiSkillIssue" target="_blank" rel="noopener">Code</a></div>
           </div>
         </article>
         </div>
@@ -99,7 +101,7 @@
       <section class="panel contact" aria-label="Contact">
         <div>
           <h2>Want to see more?</h2>
-          <p>Everything I make ends up on GitHub. Follow along there for new projects.</p>
+          <p>My public projects live on GitHub. Follow along there for new ones.</p>
         </div>
         <a class="button primary" href="https://github.com/32KZ" target="_blank" rel="noopener">Visit my GitHub</a>
       </section>
@@ -108,7 +110,6 @@
     <footer class="site-footer">
       <div class="site-footer__inner">
         <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
-        <img src="https://count.moeyy.cn/get/@:32KZ?theme=asoul" class="counter-img" alt="Visitor counter" loading="lazy" onerror="this.remove()" />
       </div>
     </footer>
 

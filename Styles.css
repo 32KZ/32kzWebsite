@@ -769,3 +769,132 @@ button.button:disabled {
 .card__media--contain {
   background: #ecebf7;
 }
+
+.card__media--mark,
+.project-hero__mark {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+  background: radial-gradient(circle at 30% 20%, rgba(255, 113, 217, 0.45), transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(108, 123, 255, 0.55), transparent 60%),
+    var(--surface-alt);
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.badge {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-secondary);
+}
+
+.badge--private {
+  border-color: rgba(255, 113, 217, 0.4);
+  color: #ffb3ec;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.section-head .section-title {
+  margin: 0;
+}
+
+.project-hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.project-hero__mark {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-elevated);
+}
+
+.project-hero__mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin: 0.5rem 0 0;
+}
+
+.facts dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.facts dd {
+  margin: 0.2rem 0 0;
+}
+
+.prose ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.prose .hero__actions {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .project-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .project-hero__mark {
+    width: 112px;
+    height: 112px;
+    font-size: 2.2rem;
+  }
+}
+
+.card__title {
+  align-items: flex-start;
+}
+
+.card__title h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.prose .hero__actions {
+  justify-content: flex-start;
+}
