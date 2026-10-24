@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>ZKMapper | 32KZ</title>
+    <meta name="description" content="Maps the people at a company on LinkedIn and saves them to a CSV, for several companies at once." />
+    <meta property="og:title" content="ZKMapper | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/ZKMapper.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="Maps the people at a company on LinkedIn and saves them to a CSV, for several companies at once." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>ZKMapper</h1>
+        <ul class="tags"><li>C#</li><li>.NET</li><li>Automation</li></ul>
+        <p>ZKMapper is a for-fun automation project. Give it a company name and some search filters and it works through the company's LinkedIn people page, collecting everyone who matches into a CSV.</p>
+        <p>It runs as an interactive command-line app and supports several companies in one go.</p>
+        <div class="hero__actions">
+          <a class="button primary" href="https://github.com/32KZ/ZKmapper" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="button ghost" href="Projects.html">All projects</a>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Project details">
+        <dl class="facts">
+          <div><dt>Language</dt><dd>C#</dd></div>
+          <div><dt>Built with</dt><dd>.NET, Playwright, Spectre.Console</dd></div>
+          <div><dt>Platform</dt><dd>Windows</dd></div>
+          <div><dt>Started</dt><dd>March 2026</dd></div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="features-title">
+        <h2 class="section-title" id="features-title">What it does</h2>
+        <ul class="feature-list">
+          <li><strong>Filters</strong> by job title keyword and country or region.</li>
+          <li><strong>Profile extraction</strong> of name, headline, current roles and profile link.</li>
+          <li><strong>Email pattern guesses</strong> based on name and company domain.</li>
+          <li>Saved browser sessions, so it doesn't need to log in every run.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
+  </body>
+</html>

@@ -300,32 +300,9 @@ main {
   transform: translateX(4px);
 }
 
-.moe-counter {
-  text-align: center;
-  background: var(--surface);
-  border-radius: 28px;
-  padding: 2.5rem 2rem;
-  border: 1px solid var(--border-soft);
-  box-shadow: var(--shadow-elevated);
-}
 
-.moe-counter h2 {
-  margin: 0 0 0.75rem;
-  font-size: 1.9rem;
-}
 
-.moe-counter p {
-  margin: 0 0 1.5rem;
-  color: var(--text-secondary);
-}
 
-.counter-img {
-  width: min(260px, 100%);
-  border-radius: 999px;
-  border: none;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.5rem 1rem;
-}
 
 .gallery {
   display: flex;
@@ -743,13 +720,6 @@ button.button:disabled {
   color: var(--text-secondary);
 }
 
-.counter-img {
-  height: 40px;
-  width: auto;
-  padding: 0;
-  background: none;
-  border-radius: 0;
-}
 
 @media (max-width: 600px) {
   .panel {
@@ -768,4 +738,79 @@ button.button:disabled {
 
 .card__media--contain {
   background: #ecebf7;
+}
+
+/* Projects without artwork get a title tile instead */
+.card__media--mark {
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.25rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(108, 123, 255, 0.35), rgba(255, 113, 217, 0.22)), var(--surface-alt);
+}
+
+.card__media--mark strong {
+  font-size: clamp(1.5rem, 1.5vw + 1rem, 2.1rem);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.card__media--mark span {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.tags li.tag--private {
+  background: rgba(255, 113, 217, 0.15);
+  color: #ffc2ee;
+}
+
+.project-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-group__intro {
+  margin: -0.75rem 0 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* Individual project pages */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.facts dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.facts dd {
+  margin: 0.35rem 0 0;
+  font-weight: 500;
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 760px;
+}
+
+.feature-list li {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.feature-list strong {
+  color: var(--text-primary);
 }
