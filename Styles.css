@@ -814,3 +814,104 @@ button.button:disabled {
 .feature-list strong {
   color: var(--text-primary);
 }
+
+/* Animated backgrounds */
+.bg-particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Aurora blobs drifting inside cards */
+.card,
+.info-card,
+.panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.card::before,
+.card::after,
+.info-card::before,
+.info-card::after,
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.32;
+  animation: aurora-drift-a 16s ease-in-out infinite alternate;
+}
+
+.card::before,
+.info-card::before,
+.panel::before {
+  left: -35%;
+  top: -30%;
+  background: radial-gradient(circle, #5533ff 0%, rgba(85, 51, 255, 0) 65%);
+}
+
+.card::after,
+.info-card::after,
+.panel::after {
+  right: -40%;
+  bottom: -35%;
+  background: radial-gradient(circle, #ff71d9 0%, rgba(255, 113, 217, 0) 65%);
+  animation-name: aurora-drift-b;
+  animation-duration: 19s;
+}
+
+/* Offset neighbours so cards don't move in sync */
+.card:nth-child(3n + 2)::before,
+.info-card:nth-child(3n + 2)::before {
+  animation-delay: -6s;
+}
+
+.card:nth-child(3n + 3)::before,
+.info-card:nth-child(3n + 3)::before {
+  animation-delay: -11s;
+}
+
+.card:nth-child(2n)::after,
+.info-card:nth-child(2n)::after {
+  animation-delay: -9s;
+  background: radial-gradient(circle, #6c7bff 0%, rgba(108, 123, 255, 0) 65%);
+}
+
+.card:hover::before,
+.card:hover::after,
+.info-card:hover::before,
+.info-card:hover::after {
+  opacity: 0.5;
+}
+
+@keyframes aurora-drift-a {
+  to {
+    transform: translate(45%, 35%) scale(1.2);
+  }
+}
+
+@keyframes aurora-drift-b {
+  to {
+    transform: translate(-40%, -30%) scale(0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card::before,
+  .card::after,
+  .info-card::before,
+  .info-card::after,
+  .panel::before,
+  .panel::after {
+    animation: none;
+  }
+}
