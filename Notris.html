@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="Styles.css" />
     <script src="JS/Background.js" defer></script>
   </head>
-  <body onload="startGame()">
+  <body>
     <header class="site-header">
       <nav class="site-nav" aria-label="Main">
         <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
@@ -36,7 +36,26 @@
         <p>Totally not Tetris.</p>
       </section>
 
-      <canvas id="game-canvas" width="300" height="600"></canvas>
+      <section class="panel tool notris" aria-label="Notris game">
+        <dl class="notris__stats" aria-live="polite">
+          <div><dt>Score</dt><dd id="notris-score">0</dd></div>
+          <div><dt>Lines</dt><dd id="notris-lines">0</dd></div>
+          <div><dt>Level</dt><dd id="notris-level">1</dd></div>
+        </dl>
+        <canvas id="game-canvas" width="300" height="600">Notris needs a browser that supports canvas.</canvas>
+        <div class="tool__buttons notris__controls">
+          <button type="button" class="button small ghost" data-notris="left" aria-label="Move left">&larr;</button>
+          <button type="button" class="button small ghost" data-notris="rotate" aria-label="Rotate">&#x21bb;</button>
+          <button type="button" class="button small ghost" data-notris="right" aria-label="Move right">&rarr;</button>
+          <button type="button" class="button small ghost" data-notris="down" aria-label="Move down">&darr;</button>
+          <button type="button" class="button small primary" data-notris="drop">Drop</button>
+        </div>
+        <div class="tool__buttons">
+          <button type="button" class="button small ghost" data-notris="pause">Pause</button>
+          <button type="button" class="button small ghost" data-notris="restart">Restart</button>
+        </div>
+        <p class="notris__help">Arrow keys move and rotate, space drops, P pauses, Enter restarts after game over.</p>
+      </section>
     </main>
 
     <footer class="site-footer">
