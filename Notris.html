@@ -45,7 +45,8 @@
         <canvas id="game-canvas" width="300" height="600">Notris needs a browser that supports canvas.</canvas>
         <div class="tool__buttons notris__controls">
           <button type="button" class="button small ghost" data-notris="left" aria-label="Move left">&larr;</button>
-          <button type="button" class="button small ghost" data-notris="rotate" aria-label="Rotate">&#x21bb;</button>
+          <button type="button" class="button small ghost" data-notris="rotate-back" aria-label="Rotate anticlockwise">&#x21ba;</button>
+          <button type="button" class="button small ghost" data-notris="rotate" aria-label="Rotate clockwise">&#x21bb;</button>
           <button type="button" class="button small ghost" data-notris="right" aria-label="Move right">&rarr;</button>
           <button type="button" class="button small ghost" data-notris="down" aria-label="Move down">&darr;</button>
           <button type="button" class="button small primary" data-notris="drop">Drop</button>
@@ -54,7 +55,7 @@
           <button type="button" class="button small ghost" data-notris="pause">Pause</button>
           <button type="button" class="button small ghost" data-notris="restart">Restart</button>
         </div>
-        <p class="notris__help">Arrow keys move and rotate, space drops, P pauses, Enter restarts after game over.</p>
+        <p class="notris__help">A / D or &larr; / &rarr; move, W or &uarr; rotates, C rotates the other way, S or &darr; drops faster, Space drops instantly, P pauses, Enter restarts after game over.</p>
       </section>
     </main>
 
