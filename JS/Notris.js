@@ -371,8 +371,6 @@
     KeyS: "down",
     Space: "drop",
     ShiftLeft: "hold",
-    ShiftRight: "hold",
-    KeyE: "hold",
     KeyP: "pause",
     Enter: "restart",
     NumpadEnter: "restart"

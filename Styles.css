@@ -955,9 +955,22 @@ button.button:disabled {
   font-size: 0.9rem;
 }
 
-.notris__boxes {
+.notris__play {
   display: flex;
-  gap: 1.25rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.notris__play #game-canvas {
+  max-width: calc(100% - 6.5rem);
+}
+
+.notris__side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .notris__box {
@@ -976,6 +989,7 @@ button.button:disabled {
 }
 
 .notris .notris__box canvas {
+  width: 5.5rem;
   max-height: none;
   aspect-ratio: auto;
   box-shadow: none;
