@@ -13,7 +13,7 @@
     <meta property="og:description" content="Totally not Tetris." />
     <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/Seele.png" />
     <meta name="theme-color" content="#0c0b16" />
-    <link rel="stylesheet" href="Styles.css?v=7" />
+    <link rel="stylesheet" href="Styles.css?v=8" />
     <script src="JS/Background.js" defer></script>
   </head>
   <body>
@@ -44,17 +44,15 @@
           <div><dt>Level</dt><dd id="notris-level">1</dd></div>
         </dl>
         <div class="notris__play">
+          <figure class="notris__box">
+            <figcaption>Hold</figcaption>
+            <canvas id="notris-hold" width="150" height="105" aria-label="Held piece"></canvas>
+          </figure>
           <canvas id="game-canvas" width="300" height="600">Notris needs a browser that supports canvas.</canvas>
-          <div class="notris__side">
-            <figure class="notris__box">
-              <figcaption>Hold</figcaption>
-              <canvas id="notris-hold" width="100" height="70" aria-label="Held piece"></canvas>
-            </figure>
-            <figure class="notris__box">
-              <figcaption>Next</figcaption>
-              <canvas id="notris-next" width="100" height="70" aria-label="Next piece"></canvas>
-            </figure>
-          </div>
+          <figure class="notris__box">
+            <figcaption>Next</figcaption>
+            <canvas id="notris-next" width="150" height="315" aria-label="Next three pieces"></canvas>
+          </figure>
         </div>
         <div class="tool__buttons notris__controls">
           <button type="button" class="button small ghost" data-notris="left" aria-label="Move left">&larr;</button>
@@ -80,6 +78,6 @@
     </footer>
 
     <script src="JS/Site.js"></script>
-    <script src="JS/Notris.js?v=7"></script>
+    <script src="JS/Notris.js?v=8"></script>
   </body>
 </html>
