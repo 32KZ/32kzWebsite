@@ -23,8 +23,27 @@
   var scoreEl = document.getElementById("notris-score");
   var linesEl = document.getElementById("notris-lines");
   var levelEl = document.getElementById("notris-level");
+  var bestEl = document.getElementById("notris-best");
+  var nextCanvas = document.getElementById("notris-next");
+  var holdCanvas = document.getElementById("notris-hold");
 
-  var board, piece, score, lines, level, dropTimer, lastTime, paused, gameOver;
+  var BEST_KEY = "notris-best";
+  var board, piece, nextType, heldType, canHold, score, best, newBest, lines, level, dropTimer, lastTime, paused, gameOver;
+
+  // Best score is kept in this browser only; storage can be blocked, so never rely on it
+  function loadBest() {
+    try {
+      return parseInt(localStorage.getItem(BEST_KEY), 10) || 0;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  function saveBest(value) {
+    try {
+      localStorage.setItem(BEST_KEY, String(value));
+    } catch (e) {}
+  }
 
   function emptyBoard() {
     var rows = [];
@@ -32,9 +51,14 @@
     return rows;
   }
 
-  function newPiece() {
-    var shape = SHAPES[Math.floor(Math.random() * SHAPES.length)];
+  function randomType() {
+    return Math.floor(Math.random() * SHAPES.length);
+  }
+
+  function newPiece(type) {
+    var shape = SHAPES[type];
     return {
+      type: type,
       shape: shape.map(function (row) { return row.slice(); }),
       row: 0,
       col: Math.floor((COLUMNS - shape[0].length) / 2)
@@ -100,8 +124,33 @@
       }
     }
     clearRows();
-    piece = newPiece();
+    spawnNext();
+  }
+
+  function spawnNext() {
+    piece = newPiece(nextType);
+    nextType = randomType();
+    canHold = true;
+    drawPreview(nextCanvas, nextType);
+    drawPreview(holdCanvas, heldType);
     if (!fits(piece.shape, piece.row, piece.col)) endGame();
+  }
+
+  // Swap the current piece into the hold slot, once per piece
+  function hold() {
+    if (!canHold) return;
+    var current = piece.type;
+    if (heldType === null) {
+      heldType = current;
+      spawnNext();
+    } else {
+      piece = newPiece(heldType);
+      heldType = current;
+      if (!fits(piece.shape, piece.row, piece.col)) endGame();
+    }
+    canHold = false;
+    drawPreview(holdCanvas, heldType);
+    dropTimer = 0;
   }
 
   function clearRows() {
@@ -149,6 +198,55 @@
     scoreEl.textContent = score;
     linesEl.textContent = lines;
     levelEl.textContent = level;
+    bestEl.textContent = Math.max(best, score);
+  }
+
+  // Draws one piece centred in a small box, used for Next and Hold
+  function drawPreview(target, type) {
+    var pctx = target.getContext("2d");
+    var size = 20;
+    pctx.fillStyle = BOARD_COLOUR;
+    pctx.fillRect(0, 0, target.width, target.height);
+    if (type === null) return;
+    var shape = SHAPES[type];
+    var cells = [];
+    for (var r = 0; r < shape.length; r++) {
+      for (var c = 0; c < shape[r].length; c++) {
+        if (shape[r][c]) cells.push([r, c]);
+      }
+    }
+    var rows = cells.map(function (p) { return p[0]; });
+    var cols = cells.map(function (p) { return p[1]; });
+    var minR = Math.min.apply(null, rows);
+    var minC = Math.min.apply(null, cols);
+    var width = (Math.max.apply(null, cols) - minC + 1) * size;
+    var height = (Math.max.apply(null, rows) - minR + 1) * size;
+    var offX = (target.width - width) / 2;
+    var offY = (target.height - height) / 2;
+    if (target === holdCanvas && !canHold) pctx.globalAlpha = 0.45;
+    cells.forEach(function (p) {
+      var x = offX + (p[1] - minC) * size;
+      var y = offY + (p[0] - minR) * size;
+      pctx.fillStyle = BLOCK_COLOUR;
+      pctx.fillRect(x, y, size, size);
+      pctx.strokeStyle = "black";
+      pctx.strokeRect(x, y, size, size);
+    });
+    pctx.globalAlpha = 1;
+  }
+
+  // Row the current piece would land on if dropped now
+  function ghostRow() {
+    var row = piece.row;
+    while (fits(piece.shape, row + 1, piece.col)) row++;
+    return row;
+  }
+
+  function drawGhostBlock(x, y) {
+    ctx.fillStyle = "rgba(255, 65, 54, 0.18)";
+    ctx.fillRect(x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);
+    ctx.strokeStyle = "rgba(255, 65, 54, 0.8)";
+    ctx.strokeRect(x * BLOCK_SIZE + 1.5, y * BLOCK_SIZE + 1.5, BLOCK_SIZE - 3, BLOCK_SIZE - 3);
   }
 
   function drawBlock(x, y) {
@@ -180,6 +278,14 @@
     }
 
     if (!gameOver) {
+      var landing = ghostRow();
+      if (landing !== piece.row) {
+        for (var gr = 0; gr < piece.shape.length; gr++) {
+          for (var gc = 0; gc < piece.shape[gr].length; gc++) {
+            if (piece.shape[gr][gc] && landing + gr >= 0) drawGhostBlock(piece.col + gc, landing + gr);
+          }
+        }
+      }
       for (var pr = 0; pr < piece.shape.length; pr++) {
         for (var pc = 0; pc < piece.shape[pr].length; pc++) {
           if (piece.shape[pr][pc] && piece.row + pr >= 0) drawBlock(piece.col + pc, piece.row + pr);
@@ -187,7 +293,7 @@
       }
     }
 
-    if (gameOver) drawMessage("Game over", "Press Enter or tap Restart");
+    if (gameOver) drawMessage(newBest ? "New best!" : "Game over", newBest ? "Score " + score + ". Enter to restart" : "Press Enter or tap Restart");
     else if (paused) drawMessage("Paused", "Press P or tap Pause");
   }
 
@@ -210,17 +316,28 @@
 
   function endGame() {
     gameOver = true;
+    newBest = score > best;
+    if (newBest) {
+      best = score;
+      saveBest(best);
+    }
+    updateStats();
   }
 
   function startGame() {
     board = emptyBoard();
-    piece = newPiece();
+    heldType = null;
+    nextType = randomType();
     score = 0;
+    best = loadBest();
+    newBest = false;
     lines = 0;
     level = 1;
     dropTimer = 0;
     paused = false;
     gameOver = false;
+    spawnNext();
+    drawPreview(holdCanvas, null);
     updateStats();
   }
 
@@ -238,6 +355,7 @@
     else if (action === "rotate-back") turn(-1);
     else if (action === "down") softDrop();
     else if (action === "drop") hardDrop();
+    else if (action === "hold") hold();
   }
 
   // Matched on the physical key, so WASD works with Caps Lock on
@@ -252,6 +370,9 @@
     ArrowDown: "down",
     KeyS: "down",
     Space: "drop",
+    ShiftLeft: "hold",
+    ShiftRight: "hold",
+    KeyE: "hold",
     KeyP: "pause",
     Enter: "restart",
     NumpadEnter: "restart"
