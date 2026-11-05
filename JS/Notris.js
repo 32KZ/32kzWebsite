@@ -70,8 +70,13 @@
     return false;
   }
 
-  function turn() {
-    var turned = rotate(piece.shape);
+  function rotateBack(shape) {
+    return rotate(rotate(rotate(shape)));
+  }
+
+  // direction 1 = clockwise, -1 = anticlockwise
+  function turn(direction) {
+    var turned = direction === -1 ? rotateBack(piece.shape) : rotate(piece.shape);
     // Nudge sideways if the rotation hits a wall
     var kicks = [0, -1, 1, -2, 2];
     for (var i = 0; i < kicks.length; i++) {
@@ -229,24 +234,32 @@
     if (paused || gameOver) return;
     if (action === "left") move(-1, 0);
     else if (action === "right") move(1, 0);
-    else if (action === "rotate") turn();
+    else if (action === "rotate") turn(1);
+    else if (action === "rotate-back") turn(-1);
     else if (action === "down") softDrop();
     else if (action === "drop") hardDrop();
   }
 
+  // Matched on the physical key, so WASD works with Caps Lock on
   var KEYS = {
     ArrowLeft: "left",
+    KeyA: "left",
     ArrowRight: "right",
+    KeyD: "right",
     ArrowUp: "rotate",
+    KeyW: "rotate",
+    KeyC: "rotate-back",
     ArrowDown: "down",
-    " ": "drop",
-    p: "pause",
-    P: "pause",
-    Enter: "restart"
+    KeyS: "down",
+    Space: "drop",
+    KeyP: "pause",
+    Enter: "restart",
+    NumpadEnter: "restart"
   };
 
   window.addEventListener("keydown", function (event) {
-    var action = KEYS[event.key];
+    if (event.ctrlKey || event.metaKey || event.altKey) return;
+    var action = KEYS[event.code];
     if (!action) return;
     if (action === "restart" && !gameOver) return;
     event.preventDefault(); // Stop arrows and space scrolling the page
