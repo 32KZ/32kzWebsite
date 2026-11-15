@@ -492,6 +492,16 @@ canvas {
   line-height: 1.7;
 }
 
+/* Project pages: the header sits in its own panel, like the details below it */
+.page-header--card {
+  max-width: none;
+}
+
+.page-header--card > p,
+.page-header--card > .tags {
+  max-width: 720px;
+}
+
 .section-title {
   margin: 0 0 1.5rem;
   font-size: 1.85rem;
