@@ -762,6 +762,143 @@ button.button:disabled {
   color: var(--text-secondary);
 }
 
+/* Logo artwork on a dark glow, used for SUPERNOVA */
+.card__media--logo {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(255, 40, 60, 0.35) 0%, rgba(120, 0, 20, 0.25) 40%, rgba(8, 6, 14, 0.95) 75%), #08060e;
+}
+
+.card__media--logo img {
+  object-fit: contain;
+  padding: 0.4rem;
+  filter: drop-shadow(0 0 18px rgba(255, 30, 60, 0.45));
+  transition: transform 600ms ease;
+}
+
+.card:hover .card__media--logo img,
+.card:focus-within .card__media--logo img {
+  transform: scale(1.06) rotate(8deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__media--logo img {
+    transition: none;
+  }
+}
+
+/* A project's README, shown on its page */
+.readme {
+  overflow-wrap: anywhere;
+}
+
+.readme > :first-child {
+  margin-top: 0;
+}
+
+.readme h2 {
+  margin: 2.25rem 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.readme h3 {
+  margin: 1.75rem 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.readme p,
+.readme li,
+.readme td {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.readme strong {
+  color: var(--text-primary);
+}
+
+.readme a {
+  color: var(--accent);
+}
+
+.readme hr {
+  border: 0;
+  border-top: 1px solid var(--border-soft);
+  margin: 2rem 0;
+}
+
+.readme img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 0.5rem 0;
+}
+
+.readme sub {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.readme code {
+  font-family: Consolas, "Cascadia Mono", Menlo, monospace;
+  font-size: 0.88em;
+  padding: 0.1em 0.4em;
+  border-radius: 6px;
+  background: rgba(157, 140, 255, 0.14);
+  color: #e4deff;
+}
+
+.readme pre {
+  overflow-x: auto;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: rgba(5, 6, 20, 0.6);
+  border: 1px solid var(--border-soft);
+  line-height: 1.45;
+}
+
+.readme pre code {
+  padding: 0;
+  background: none;
+  color: var(--text-primary);
+  overflow-wrap: normal;
+}
+
+.readme table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+}
+
+.readme th,
+.readme td {
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--border-soft);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: normal;
+}
+
+.readme th {
+  color: var(--text-primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.readme__source {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.readme__source a {
+  color: var(--accent);
+}
+
 .tags li.tag--private {
   background: rgba(255, 113, 217, 0.15);
   color: #ffc2ee;

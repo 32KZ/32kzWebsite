@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>ZKO | 32KZ</title>
+    <meta name="description" content="A keyboard overlay mod for Celeste that lights up the keys you're pressing, using your own bindings." />
+    <meta property="og:title" content="ZKO | 32KZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://32kz.github.io/32kzWebsite/ZKO.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="A keyboard overlay mod for Celeste that lights up the keys you're pressing, using your own bindings." />
+    <meta property="og:image" content="https://32kz.github.io/32kzWebsite/Images/ZKO-preview.png" />
+    <meta name="theme-color" content="#0c0b16" />
+    <link rel="stylesheet" href="Styles.css" />
+    <script src="JS/Background.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <a class="brand" href="index.html"><img src="favicon.png" alt="" />32KZ</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="Projects.html" class="active" aria-current="page">Projects</a>
+          <a href="RareMusic.html">Music</a>
+          <a class="nav-cta" href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1>ZKO: Zeek Overlay</h1>
+        <ul class="tags"><li>Celeste</li><li>Everest mod</li><li>C#</li></ul>
+        <p>A keyboard overlay for Celeste that lights up the keys you're pressing, using your own bindings. It's handy for recording runs, streaming, teaching tech, or just seeing your own inputs.</p>
+        <div class="hero__actions">
+          <a class="button primary" href="https://gamebanana.com/mods/741179" target="_blank" rel="noopener">Get it on GameBanana</a>
+          <a class="button ghost" href="https://github.com/32KZ/ZKO" target="_blank" rel="noopener">Code</a>
+          <a class="button ghost" href="Projects.html">All projects</a>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Project details">
+        <dl class="facts">
+          <div><dt>Language</dt><dd>C#</dd></div>
+          <div><dt>Built with</dt><dd>Everest (.NET 8)</dd></div>
+          <div><dt>Game</dt><dd>Celeste</dd></div>
+          <div><dt>Started</dt><dd>November 2026</dd></div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="readme-title">
+        <h2 class="section-title" id="readme-title">README</h2>
+        <article class="panel readme">
+          <p><strong>A keyboard overlay for Celeste that lights up the keys you're pressing, using your own bindings.</strong></p>
+          <p>ZKO is an <a target="_blank" rel="noopener" href="https://everestapi.github.io/">Everest</a> code mod. It draws a small slanted keyboard in a corner of the screen with Dash, Crouch Dash, Grab, Jump, the four directions and Esc. Each key lights up while you hold it. It's handy for recording runs, streaming, teaching tech, or just seeing your own inputs.</p>
+          <p><img loading="lazy" alt="ZKO preview: default style, arrow-key labels, normal and inverted colours over a busy background" src="Images/ZKO-preview.png" /></p>
+          <p><sub>Preview made from the mod's own drawing code. Top left: default look with A held. Top right: arrow-key bindings while dashing, jumping and holding right. Bottom: the same overlay over a busy background, normal (left) and with all invert options on (right). In-game labels use Celeste's font.</sub></p>
+          <hr />
+          <h2 id="features">Features</h2>
+          <ul>
+          <li><strong>Uses your own bindings.</strong> Every key follows what you set in Celeste's Keyboard Config and Controller Config, so there's nothing to set up. Controller buttons and sticks light the keys too.</li>
+          <li><strong>Shows the key you actually use.</strong> Direction keys show the bound key's name (<code>W A S D</code>, <code>I J K L</code>, ...). Arrow-key bindings, or directions with only a controller bound, get drawn arrows.</li>
+          <li><strong>Honest direction display.</strong> Holding left and right together lights both keys, unlike the game's own movement input, which only keeps the newest one. Mirror Mode doesn't flip it either.</li>
+          <li><strong>Invert mode.</strong> The outline, key colour and labels can each be drawn by <em>inverting</em> whatever is behind them, like Minecraft's crosshair, so the overlay stays readable over any background. Pressed keys keep your pressed colour so presses still stand out.</li>
+          <li><strong>Full colour control.</strong> Key, outline, pressed and label colours each have a preset list plus exact 0 to 255 R/G/B sliders.</li>
+          <li><strong>Put it anywhere.</strong> Four corner presets with adjustable padding, or a custom X/Y position. Scale from 30% to 300%, plus opacity.</li>
+          <li><strong>Choose where it appears.</strong> Gameplay only, gameplay and the pause menu, or everywhere (map and menus too).</li>
+          <li><strong>Toggle hotkey.</strong> Bind a key or button to show and hide the overlay at any time.</li>
+          <li><strong>No art assets.</strong> Everything is drawn in code, so it stays crisp at any resolution and scale.</li>
+          </ul>
+          <h2 id="layout">Layout</h2>
+          <pre><code> ┌──────────────┐ ┌─────┐ ┌─────┐
+ │     DASH     │ │  ↑  │ │ GRB │
+ └──────────────┘ └─────┘ └─────┘
+┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐
+│ CD  │ │  ←  │ │  ↓  │ │  →  │
+└─────┘ └─────┘ └─────┘ └─────┘
+┌─────┐ ┌──────────────────────┐
+│ ESC │ │         JUMP         │
+└─────┘ └──────────────────────┘
+</code></pre>
+          <table>
+          <thead>
+          <tr>
+          <th>Key</th>
+          <th>Lights up when</th>
+          <th>Label</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>DASH</td>
+          <td>Dash is held</td>
+          <td><code>DASH</code></td>
+          </tr>
+          <tr>
+          <td>CD</td>
+          <td>Crouch Dash (Demo Dash) is held</td>
+          <td><code>CD</code></td>
+          </tr>
+          <tr>
+          <td>GRB</td>
+          <td>Grab is held</td>
+          <td><code>GRB</code></td>
+          </tr>
+          <tr>
+          <td>JUMP</td>
+          <td>Jump is held</td>
+          <td><code>JUMP</code></td>
+          </tr>
+          <tr>
+          <td>↑ ← ↓ →</td>
+          <td>That direction is held (keyboard, D-pad or stick)</td>
+          <td>Your bound key, or an arrow</td>
+          </tr>
+          <tr>
+          <td>ESC</td>
+          <td>Pause or Esc is held</td>
+          <td><code>ESC</code></td>
+          </tr>
+          </tbody>
+          </table>
+          <h2 id="install">Install</h2>
+          <ol>
+          <li>Install <a target="_blank" rel="noopener" href="https://everestapi.github.io/">Everest</a> (build 5935 or newer), for example with Olympus.</li>
+          <li>Download <code>ZKO.zip</code> from <a target="_blank" rel="noopener" href="https://github.com/32KZ/ZKO/releases">Releases</a> (or build it yourself, see below).</li>
+          <li>Put <code>ZKO.zip</code> in your <code>Celeste/Mods</code> folder. Don't unzip it.</li>
+          <li>Start Celeste. The overlay appears in the bottom-left corner when you enter a level.</li>
+          </ol>
+          <p>Options are under <strong>Mod Options → ZKO (Keyboard Overlay)</strong>.</p>
+          <h2 id="settings">Settings</h2>
+          <table>
+          <thead>
+          <tr>
+          <th>Setting</th>
+          <th>Default</th>
+          <th>What it does</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>Show Overlay</td>
+          <td>On</td>
+          <td>Master on/off switch</td>
+          </tr>
+          <tr>
+          <td>Show Overlay In</td>
+          <td>Gameplay + Pause</td>
+          <td><code>Gameplay Only</code>, <code>Gameplay + Pause</code>, or <code>Everywhere</code> (map, menus, file select...)</td>
+          </tr>
+          <tr>
+          <td>Position</td>
+          <td>Bottom Left</td>
+          <td><code>Top Left</code>, <code>Bottom Left</code>, <code>Top Right</code>, <code>Bottom Right</code>, or <code>Custom</code></td>
+          </tr>
+          <tr>
+          <td>Edge Padding (H / V)</td>
+          <td>2% / 5%</td>
+          <td>Distance from the screen edge for the corner presets</td>
+          </tr>
+          <tr>
+          <td>Custom Position X / Y</td>
+          <td>2% / 95%</td>
+          <td>Used when Position is Custom. 0% is left/top, 100% is right/bottom</td>
+          </tr>
+          <tr>
+          <td>Scale</td>
+          <td>100%</td>
+          <td>30% to 300%</td>
+          </tr>
+          <tr>
+          <td>Opacity</td>
+          <td>100%</td>
+          <td>10% to 100%</td>
+          </tr>
+          <tr>
+          <td>Key Colour</td>
+          <td>Black</td>
+          <td>Fill of an unpressed key (presets + R/G/B)</td>
+          </tr>
+          <tr>
+          <td>Invert Key Colour</td>
+          <td>Off</td>
+          <td>Unpressed keys invert what's behind them</td>
+          </tr>
+          <tr>
+          <td>Outline Colour</td>
+          <td>White</td>
+          <td>Key border (presets + R/G/B)</td>
+          </tr>
+          <tr>
+          <td>Invert Outline</td>
+          <td>Off</td>
+          <td>Borders invert what's behind them</td>
+          </tr>
+          <tr>
+          <td>Pressed Colour</td>
+          <td>Olive <code>#A8B03A</code></td>
+          <td>Fill of a held key. Never inverted</td>
+          </tr>
+          <tr>
+          <td>Label Colour</td>
+          <td>White</td>
+          <td>Text and arrows (presets + R/G/B)</td>
+          </tr>
+          <tr>
+          <td>Invert Labels</td>
+          <td>Off</td>
+          <td>Labels invert what's behind them</td>
+          </tr>
+          <tr>
+          <td>Debug: Show Lag Spikes</td>
+          <td>Off</td>
+          <td>Shows where the time went when a frame takes over 40 ms (see <a href="#troubleshooting">Troubleshooting</a>)</td>
+          </tr>
+          <tr>
+          <td>Toggle Overlay</td>
+          <td>Unbound</td>
+          <td>Hotkey to show/hide, set under Keyboard Config / Controller Config</td>
+          </tr>
+          </tbody>
+          </table>
+          <p>Settings are saved in <code>Celeste/Saves/modsettings-ZKO.celeste</code>. Colours are stored there as <code>RRGGBB</code> hex if you want to paste exact values.</p>
+          <h2 id="how-it-works">How it works</h2>
+          <h3 id="reading-input">Reading input</h3>
+          <p>ZKO never asks you to configure keys because it reads the game's own input objects:</p>
+          <ul>
+          <li><strong>Dash, Crouch Dash, Grab, Jump, Pause/Esc</strong> use Celeste's virtual buttons (<code>Input.Dash</code>, <code>Input.CrouchDash</code>, <code>Input.Grab</code>, <code>Input.Jump</code>, <code>Input.Pause</code>, <code>Input.ESC</code>). These already cover every keyboard key, controller button and mouse button you've bound, plus any extra bindings Everest adds.</li>
+          <li><strong>Directions</strong> read the raw <code>Settings.Instance.Left/Right/Up/Down</code> bindings (and their <em>Move Only</em> variants) through <code>Binding.Check</code>, using the same 0.3 stick threshold the game uses. The game's own movement axes (<code>Input.MoveX/MoveY</code>) only report the newest of two opposite keys and get mirrored in Mirror Mode. An input display should show what your fingers are doing, so ZKO doesn't use them.</li>
+          <li><strong>Direction labels</strong> come from the first keyboard key in each binding, turned into a short name (<code>W</code>, <code>LSH</code>, <code>;</code>, <code>N4</code>, ...). Arrow keys and controller-only bindings get a drawn triangle instead.</li>
+          </ul>
+          <h3 id="drawing">Drawing</h3>
+          <p>The overlay draws <strong>after the whole frame is finished</strong>, from a hook on <code>Monocle.Engine.RenderCore</code>, straight onto the screen's back buffer. Most HUD mods draw inside Celeste's HUD layer instead. ZKO does it this way for two reasons:</p>
+          <ol>
+          <li><strong>Invert mode needs the real pixels underneath.</strong> Celeste can render its HUD into a separate transparent buffer, and inverting "transparent" just gives white. Drawing on the finished frame means there's always a real image to invert.</li>
+          <li><strong>One code path everywhere.</strong> The same hook works in levels, the pause menu, the overworld and other menus, which makes "Show Overlay In" straightforward. Because it draws over the pause menu, you can also watch colour changes live while you edit them.</li>
+          </ol>
+          <p>Each key is drawn procedurally as a stack of 1-pixel-high rows in real screen pixels:</p>
+          <ul>
+          <li>Every row is shifted sideways by a fixed slant (0.18 px per px) to make the italic parallelogram shape. The whole grid shares one slant line, so the rows step left as they go down, like the original design.</li>
+          <li>Rows near the top and bottom are trimmed by a circle equation to round the corners.</li>
+          <li>A row is split into <em>outline | fill | outline</em> segments. Pixels that straddle an edge are drawn once with a coverage-weighted colour, which anti-aliases the slanted edges.</li>
+          <li><strong>No pixel is ever drawn twice.</strong> That matters for invert mode: inverting a pixel twice gives back the original colour.</li>
+          </ul>
+          <p>Labels are drawn with Celeste's own font (<code>ActiveFont</code>) through a skewed transform matrix, so the text leans with the keys.</p>
+          <h3 id="invert-mode">Invert mode</h3>
+          <p>Inverted parts use a custom blend state:</p>
+          <pre><code>result = src × (1 − dst) + dst × (1 − src)
+</code></pre>
+          <p>Drawing pure white (<code>src = 1</code>) gives <code>1 − dst</code>, the exact inverse of the background. With opacity <code>a</code> it gives <code>lerp(dst, 1 − dst, a)</code>, so the opacity slider still works. Normal and inverted parts are drawn in separate passes, and pressed keys are excluded from the fill inversion so your presses stay in the pressed colour.</p>
+          <h3 id="safety">Safety</h3>
+          <ul>
+          <li>Everything is wrapped so the overlay can't crash the game. If drawing ever throws, ZKO closes its sprite batch, writes the error once to <code>log.txt</code>, and turns itself off until restart.</li>
+          <li>Per-frame work is a handful of input checks and a few hundred rectangles, well under a millisecond. Nothing is allocated per frame.</li>
+          </ul>
+          <h2 id="building-from-source">Building from source</h2>
+          <p>Requirements: the <a target="_blank" rel="noopener" href="https://dotnet.microsoft.com/download/dotnet/8.0">.NET 8 SDK</a> and Celeste with Everest installed.</p>
+          <pre><code class="language-sh">git clone https://github.com/32KZ/ZKO.git
+cd ZKO
+dotnet build Source/ZKO.csproj -p:CelestePrefix=&quot;C:\path\to\Celeste&quot;
+</code></pre>
+          <ul>
+          <li><code>CelestePrefix</code> is your Celeste folder (the one containing <code>Celeste.dll</code> and <code>Mods/</code>). If you clone the repo into <code>Celeste/Mods/ZKO</code>, it's found automatically. To set it once instead of on every build, copy <code>Source/ZKO.local.props.example</code> to <code>Source/ZKO.local.props</code> and put your path in it. That file is ignored by git.</li>
+          <li>Every build copies the mod into <code>&lt;CelestePrefix&gt;/Mods/ZKO</code>. Add <code>-p:InstallToMods=false</code> to skip that.</li>
+          <li><code>-c Release</code> also writes <code>ZKO.zip</code>, ready to share.</li>
+          </ul>
+          <p>You can also build against Everest's reference assemblies without the game installed: download <code>lib-stripped.zip</code> from the <a target="_blank" rel="noopener" href="https://github.com/EverestAPI/Everest/releases/latest">latest Everest release</a>, unzip it, and point <code>CelestePrefix</code> at that folder.</p>
+          <h3 id="project-layout">Project layout</h3>
+          <pre><code>everest.yaml              Mod metadata (name, version, DLL, Everest dependency)
+Dialog/English.txt        Menu text
+Source/
+  ZKO.csproj              Build, install-to-Mods and zip packaging
+  ZKOModule.cs            Mod entry point: hooks Engine.Update / Engine.RenderCore
+  ZKOModuleSettings.cs    All settings + custom menu entries (colour editors, sliders)
+  OverlayRenderer.cs      Layout, input reading, key drawing, invert blend, labels
+  KeyLabels.cs            Keyboard key → short label (&quot;LeftShift&quot; → &quot;LSH&quot;)
+  ColorUtil.cs            Colour presets and hex parsing
+  LagProbe.cs             Optional frame-time diagnostics
+Docs/                     Original spec, design mock-up and build plan
+</code></pre>
+          <h2 id="troubleshooting">Troubleshooting</h2>
+          <p><strong>The game hitches for a moment when I die.</strong>
+          That isn't ZKO. When you respawn, Celeste reloads the room and the .NET runtime runs a full garbage collection. With a lot of mods loaded that can take a few hundred milliseconds, and no input is read while it runs. You can check this yourself: turn on <strong>Debug: Show Lag Spikes</strong> and die a few times. Each slow frame is broken down into game update, game render, ZKO, garbage collection and "other", on screen and in <code>log.txt</code>. ZKO's share is normally under 1 ms.</p>
+          <p><strong>The overlay doesn't show up.</strong>
+          Check <em>Show Overlay</em> is on and <em>Show Overlay In</em> matches where you're looking (it hides on the map unless set to <code>Everywhere</code>). If it disappeared after working, search <code>log.txt</code> (in your Celeste folder) for <code>ZKOModule</code>. If drawing ever failed, the error is logged there.</p>
+          <p><strong>A direction key shows a strange label.</strong>
+          It shows the <em>first</em> keyboard key bound to that direction. Reorder or rebind it in Keyboard Config.</p>
+          <h2 id="credits">Credits</h2>
+          <ul>
+          <li>Concept and design: <a target="_blank" rel="noopener" href="https://github.com/32KZ">@32KZ</a></li>
+          <li>Built with <a target="_blank" rel="noopener" href="https://github.com/EverestAPI/Everest">Everest</a> for <a target="_blank" rel="noopener" href="https://www.celestegame.com/">Celeste</a></li>
+          </ul>
+          <p>GNU General Public License (GPL) 3.0 - https://www.gnu.org/licenses/gpl-3.0.en.html#license-text</p>
+        </article>
+        <p class="readme__source">From the <a href="https://github.com/32KZ/ZKO#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; <span id="year">2026</span> 32KZ &middot; <a href="https://github.com/32KZ" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="JS/Site.js"></script>
+  </body>
+</html>
