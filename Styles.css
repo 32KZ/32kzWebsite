@@ -900,7 +900,9 @@ button.button:disabled {
 }
 
 .readme__source {
-  margin: 0.75rem 0 0;
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
   font-size: 0.85rem;
   color: var(--text-secondary);
 }
@@ -1167,4 +1169,30 @@ button.button:disabled {
     --side: 4rem;
     --gap: 0.5rem;
   }
+}
+
+/* Every bit of text sits on a backing so it stays readable over the animated background */
+.section-title,
+.project-group__intro,
+.gallery > h2 {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.45rem 1.1rem;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(5, 6, 20, 0.3);
+}
+
+.project-group__intro {
+  margin-top: -0.75rem;
+  padding: 0.4rem 1rem;
+}
+
+.site-footer {
+  background: rgba(12, 11, 22, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
